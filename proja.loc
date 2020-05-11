@@ -1,0 +1,8 @@
+server {
+	root /home/adik/PhpstormProjects/astanainvest.kz;
+	server_name astanainvest.loc;
+	include /etc/nginx/bitrix/bitrix.conf;
+	location  ~ ^/upload/(.*)$ {
+                return 301 https://investinnur-sultan.kz/upload/$1;
+        }
+}
